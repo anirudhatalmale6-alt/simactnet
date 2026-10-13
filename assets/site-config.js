@@ -19,7 +19,9 @@ window.SITE_CONFIG = {
      retouched, because it is their mark to correct, not mine. Flagged to
      Jeffery 21 Sep. */
   ORG_LOGO:  "assets/simact-logo.jpg",
-  ORG_DOMAIN: "simact.net",
+  /* 13 Oct: SImACT could not recover the simact.net logins, so they bought
+     simactforward.com instead. simact.net stays on its old WordPress host. */
+  ORG_DOMAIN: "simactforward.com",
 
   /* ─────────────────────────────────────────────────────────────────────────
      WHERE ENQUIRIES GO
