@@ -158,6 +158,9 @@ nav a:hover{background:var(--sand);color:var(--navy)}
 .pj-body ul{margin:4px 0 0;padding-left:19px;color:var(--muted);font-size:.9rem}
 .pj-body li{margin-bottom:5px}
 .pj-body h4{margin:18px 0 7px;font-size:.74rem;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--navy)}
+.pj-video{display:block;width:100%;aspect-ratio:16/9;background:#000;border-radius:12px;margin-top:4px}
+.pj-links{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.pj-links .btn{font-size:.86rem}
 
 /* forms */
 .formwrap{background:var(--sand);border:1px solid var(--line);border-radius:16px;padding:clamp(24px,4vw,38px)}
@@ -443,6 +446,18 @@ footer a:hover{color:#fff}
           <p>Cap Lamandou forms part of the Company’s broader real estate and tourism portfolio.
              Continued ownership provides exposure to the long-term potential of Jacmel’s tourism
              market while preserving the underlying value of the real estate asset.<span data-valuation></span></p>
+          <!-- 14 Oct: video + brochure supplied by Jeffery. The film is the hotel's own
+               32 s promo (Drive original 1080p, 47 MB) re-encoded to 960 px / 5.8 MB so it
+               plays on Haitian 4G; preload="none" so it costs nothing until pressed. -->
+          <h4>See the hotel</h4>
+          <video class="pj-video" controls preload="none" playsinline
+                 poster="assets/cap-lamandou-poster.jpg" aria-label="Cap Lamandou Hotel video">
+            <source src="assets/cap-lamandou.mp4" type="video/mp4">
+          </video>
+          <div class="pj-links">
+            <a class="btn btn-o" href="https://www.cap-lamandou.com/" target="_blank" rel="noopener">Visit cap-lamandou.com</a>
+            <a class="btn btn-o" href="assets/cap-lamandou-extended-stay.pdf" target="_blank" rel="noopener">Extended Stay brochure (PDF)</a>
+          </div>
         </div>
       </article>
 
