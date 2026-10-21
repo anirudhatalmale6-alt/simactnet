@@ -44,7 +44,14 @@ window.SITE_CONFIG = {
      link, the option is left out rather than shown dead. */
   APPOINTMENT_URL: "",
 
-  SOCIAL: { linkedin: "", facebook: "", instagram: "" },
+  /* 21 Oct: both confirmed by Jeffery and checked live (channel "SImACT Forward",
+     page "Simact Forward | Glen Cove NY"). */
+  SOCIAL: {
+    youtube:   "https://www.youtube.com/@SimACTForward",
+    facebook:  "https://www.facebook.com/SimactForward",
+    linkedin:  "",
+    instagram: ""
+  },
 
   /* ─────────────────────────────────────────────────────────────────────────
      THE NUMBERS — every one quoted from SImACT's own content document.

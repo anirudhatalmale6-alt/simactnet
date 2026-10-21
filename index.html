@@ -176,6 +176,10 @@ textarea{min-height:118px;resize:vertical}
 .f-note.bad{color:var(--red);font-weight:600}
 
 /* footer */
+.social-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.social-row:empty{display:none}
+.btn-social{display:inline-flex;align-items:center;min-height:46px;padding:11px 20px;border-radius:8px;border:1.5px solid var(--navy);color:var(--navy);font-weight:600;text-decoration:none}
+.btn-social:hover{background:var(--navy);color:#fff}
 footer{background:var(--navy-deep);color:rgba(255,255,255,.72);padding:54px 0 28px;font-size:.9rem}
 .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px}
 footer h4{font-size:.73rem;letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 13px}
@@ -637,6 +641,7 @@ footer a:hover{color:#fff}
     <h2 style="font-size:clamp(1.35rem,2.7vw,1.9rem)">Contact</h2>
     <div class="cards" id="contactCards"></div>
     <p class="f-note" id="contactNote" style="margin-top:18px"></p>
+    <div class="social-row" id="contactSocial"></div>
   </div>
 </section>
 
@@ -751,11 +756,17 @@ if (stats.length){
 
 (function social(){
   var s = CFG.SOCIAL || {};
+  var NAMES = { youtube: 'YouTube', facebook: 'Facebook', linkedin: 'LinkedIn', instagram: 'Instagram' };
   var items = Object.keys(s).filter(function(k){ return String(s[k] || '').trim(); });
   if (!items.length) return;
+  function name(k){ return NAMES[k] || (k.charAt(0).toUpperCase() + k.slice(1)); }
   $('socialList').innerHTML = '<h4 style="margin-top:6px">Follow</h4>' + items.map(function(k){
     return '<li><a href="' + esc(s[k]) + '" target="_blank" rel="noopener noreferrer">'
-      + k.charAt(0).toUpperCase() + k.slice(1) + '</a></li>';
+      + name(k) + '</a></li>';
+  }).join('');
+  $('contactSocial').innerHTML = items.map(function(k){
+    return '<a class="btn-social" href="' + esc(s[k]) + '" target="_blank" rel="noopener noreferrer">'
+      + 'Follow SImACT on ' + name(k) + '</a>';
   }).join('');
 })();
 
